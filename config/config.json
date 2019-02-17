@@ -1,8 +1,7 @@
-
 {
   "development": {
     "username": "root",
-    "password": "yamaha1600", 
+    "password": "518Elliott!",
     "database": "patientAllergy_db",
     "host": "localhost",
     "dialect": "mysql"
