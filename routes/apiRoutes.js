@@ -10,7 +10,7 @@ module.exports = function(app) {
     console.log(`New user ${userLogin.userName}, with id ${userLogin.password} has been created.`);
   });
 
-  app.get("/patient", function(req, res) {
+  app.get("api/patient", function(req, res) {
     db.patient.findAll({}).then(function(db) {
       res.json(db);
     });
