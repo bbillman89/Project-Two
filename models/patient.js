@@ -14,7 +14,6 @@ module.exports = function (sequelize, DataTypes) {
         sex: DataTypes.STRING,
         birth: DataTypes.DATEONLY,
         phone: DataTypes.STRING,
-        date: DataTypes.DATEONLY
     });
     return patient;
 };
