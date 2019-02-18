@@ -11,6 +11,7 @@ module.exports = function(app) {
   });
   */
 
+
   app.get("/api/patient", function(req, res) {
     console.log(db.Patient);
     db.Patient.findAll({}).then(function(db) {
