@@ -8,7 +8,8 @@ body{
 
 }
 form{
-  background-color: white;
+  background:#7f7f7f;
+  background:white;
   height: 350px;
   border-radius: 15px;
   
@@ -23,7 +24,8 @@ form{
   border-left: none;
   border-right: none;
   border-bottom: solid black 2px;
-  margin-top: 2px;
+	margin-top: 2px;
+	background-color: transparent
 
 }
 label{
@@ -36,10 +38,10 @@ label{
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color:black;
+  background-color:transparent;
   color: white;
   text-align: center;
-  height: 50px;
+  
 }
  p{
   font-family: 'Source Serif Pro', serif;
@@ -49,143 +51,140 @@ label{
   font-family: 'Abril Fatface', cursive;
 }
 h3{
-  display:inline-block
+	display:inline-block;
+	letter-spacing: 2px;
+	font-size: 55px;
+	font-family: 'Source Serif Pro', serif;
 }
-h3::first-letter{
-  color:white;
-  letter-spacing: 2px;
-}
-#statement{
+.stretchLeft{
   color: white;
-  font-family: 'Abril Fatface', cursive;
-  line-height: 60px;
-  font-size: 50px;
-  opacity: 0.9;
-
+	font-family: 'Abril Fatface', cursive;
+	font-size: 90px;
+	text-shadow: 0px 2px 3px #666;
 }
 
-.pullUp{
-	animation-name: pullUp;
-	-webkit-animation-name: pullUp;	
+.stretchLeft{
+	animation-name: stretchLeft;
+	-webkit-animation-name: stretchLeft;	
 
-	animation-duration: 2.1s;	
-	-webkit-animation-duration: 2.1s;
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
 
 	animation-timing-function: ease-out;	
 	-webkit-animation-timing-function: ease-out;	
 
-	transform-origin: 50% 100%;
-	-ms-transform-origin: 50% 100%;
-	-webkit-transform-origin: 50% 100%; 		
+	transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	-webkit-transform-origin: 100% 0%; 
 }
 
-@keyframes pullUp {
+@keyframes stretchLeft {
 	0% {
-		transform: scaleY(0.1);
+		transform: scaleX(0.3);
 	}
 	40% {
-		transform: scaleY(1.02);
+		transform: scaleX(1.02);
 	}
 	60% {
-		transform: scaleY(0.98);
+		transform: scaleX(0.98);
 	}
 	80% {
-		transform: scaleY(1.01);
+		transform: scaleX(1.01);
 	}
 	100% {
-		transform: scaleY(0.98);
+		transform: scaleX(0.98);
 	}				
 	80% {
-		transform: scaleY(1.01);
+		transform: scaleX(1.01);
 	}
 	100% {
-		transform: scaleY(1);
+		transform: scaleX(1);
 	}							
 }
 
-@-webkit-keyframes pullUp {
+@-webkit-keyframes stretchLeft {
 	0% {
-		-webkit-transform: scaleY(0.1);
+		-webkit-transform: scaleX(0.3);
 	}
 	40% {
-		-webkit-transform: scaleY(1.02);
+		-webkit-transform: scaleX(1.02);
 	}
 	60% {
-		-webkit-transform: scaleY(0.98);
+		-webkit-transform: scaleX(0.98);
 	}
 	80% {
-		-webkit-transform: scaleY(1.01);
+		-webkit-transform: scaleX(1.01);
 	}
 	100% {
-		-webkit-transform: scaleY(0.98);
+		-webkit-transform: scaleX(0.98);
 	}				
 	80% {
-		-webkit-transform: scaleY(1.01);
+		-webkit-transform: scaleX(1.01);
 	}
 	100% {
-		-webkit-transform: scaleY(1);
+		-webkit-transform: scaleX(1);
 	}		
 }
 
-.pullDown{
-	animation-name: pullDown;
-	-webkit-animation-name: pullDown;	
+.stretchRight{
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;	
 
-	animation-duration: 2.0s;	
-	-webkit-animation-duration: 2.0s;
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
 
 	animation-timing-function: ease-out;	
 	-webkit-animation-timing-function: ease-out;	
 
-	transform-origin: 50% 0%;
-	-ms-transform-origin: 50% 0%;
-	-webkit-transform-origin: 50% 0%; 		
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%; 		
 }
 
-@keyframes pullDown {
+@keyframes stretchRight {
 	0% {
-		transform: scaleY(0.1);
+		transform: scaleX(0.3);
 	}
 	40% {
-		transform: scaleY(1.02);
+		transform: scaleX(1.02);
 	}
 	60% {
-		transform: scaleY(0.98);
+		transform: scaleX(0.98);
 	}
 	80% {
-		transform: scaleY(1.01);
+		transform: scaleX(1.01);
 	}
 	100% {
-		transform: scaleY(0.98);
+		transform: scaleX(0.98);
 	}				
 	80% {
-		transform: scaleY(1.01);
+		transform: scaleX(1.01);
 	}
 	100% {
-		transform: scaleY(1);
+		transform: scaleX(1);
 	}							
 }
 
-@-webkit-keyframes pullDown {
+@-webkit-keyframes stretchRight {
 	0% {
-		-webkit-transform: scaleY(0.1);
+		-webkit-transform: scaleX(0.3);
 	}
 	40% {
-		-webkit-transform: scaleY(1.02);
+		-webkit-transform: scaleX(1.02);
 	}
 	60% {
-		-webkit-transform: scaleY(0.98);
+		-webkit-transform: scaleX(0.98);
 	}
 	80% {
-		-webkit-transform: scaleY(1.01);
+		-webkit-transform: scaleX(1.01);
 	}
 	100% {
-		-webkit-transform: scaleY(0.98);
+		-webkit-transform: scaleX(0.98);
 	}				
 	80% {
-		-webkit-transform: scaleY(1.01);
+		-webkit-transform: scaleX(1.01);
 	}
 	100% {
-		-webkit-transform: scaleY(1);
+		-webkit-transform: scaleX(1);
 	}		
 }
