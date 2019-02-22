@@ -1,6 +1,9 @@
 var db = require("../models");
 
+var path = require("path");
+
 module.exports = function(app) {
+
   // Load index page
   app.get("/findAll", function(req, res) {
     db.Patient.findAll({}).then(function(dbPatients) {
@@ -21,13 +24,13 @@ module.exports = function(app) {
         patients: dbPatients
       });
     });
+
   });
   app.get('/', function(req, res){
     res.render("/findAll");
 });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  app.get("/test", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/test.html"));
   });
 };
