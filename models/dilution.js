@@ -23,8 +23,8 @@ module.exports = function (sequelize, DataTypes) {
         rag:DataTypes.INTEGER,
         tree:DataTypes.INTEGER,
         oak:DataTypes.INTEGER,
-        date: DataTypes.DATEONLY  
-
+        date: DataTypes.DATEONLY,  
+        notes: DataTypes.STRING
     });
     return dilution;
 };
