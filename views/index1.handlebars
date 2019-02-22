@@ -29,7 +29,8 @@
             <h3>Patient:</h3>
             <ol id="example-list" class="list-group">
               <li data-id="{{patients.id}}" class="list-group-item">
-                Patients Name: {{this.first_name}} {{patients.last_name}} 
+                Patients Name: {{patients.first_name}} {{patients.last_name}} 
+                Patients Id: {{patients.patient_id}}
                 Patients Address: {{patients.address}} 
                 Patients Phone Number: {{patients.phone}} 
                 Patients Sex: {{patients.sex}} 
@@ -39,7 +40,7 @@
               </li>
             </ol>
           </div>
-          <img src="/assets/img/burger.png" width="100px" id="cute_burger">
+          <img src="{{patient.image}}" width="100px" id="Patient">
         </div>
 
         <div class="form-group">
