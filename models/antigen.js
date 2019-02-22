@@ -22,8 +22,9 @@ module.exports = function(sequelize, DataTypes) {
         plant:DataTypes.INTEGER,
         rag:DataTypes.INTEGER,
         tree:DataTypes.INTEGER,
-        oak:DataTypes.INTEGER
-  
+        oak:DataTypes.INTEGER,
+        date: DataTypes.DATEONLY,
+        notes: DataTypes.STRING
     });
     return antigen;
   };

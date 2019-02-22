@@ -1,16 +1,17 @@
 module.exports = function (sequelize, DataTypes) {
-    var patient = sequelize.define("patient", {
-        patient_id: {
-            type: DataTypes.STRING,
-            primaryKey: true,
-            defaultValue: DataTypes.UUID
-        },
+    var Patient = sequelize.define("Patient", {
+        /*id: {
+             type: DataTypes.AUTO_INCREMENT,
+             primaryKey: true,
+             defaultValue: DataTypes.UUID
+        },*/
+        patient_id: DataTypes.STRING,
         first_name: DataTypes.STRING,
         last_name: DataTypes.STRING,
         address: DataTypes.STRING,
         sex: DataTypes.STRING,
         birth: DataTypes.DATEONLY,
-        phone: DataTypes.STRING
+        phone: DataTypes.STRING,
     });
-    return patient;
+    return Patient;
 };
