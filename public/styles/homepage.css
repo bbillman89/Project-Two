@@ -1,0 +1,51 @@
+/* Styles for the main body elements */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #e6e7e8;
+}
+
+/* styles for the horizontal and vertical navbar */
+
+.navbar{
+    background-color: #ef4123;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: whitesmoke;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: whitesmoke;
+}
+
+/* styles for all the divs from pollen div to add patient */
+
+.date-field{
+    letter-spacing: 1.5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+
+.pollen-div{
+    background-color: white;
+    
+}
+
+.title{
+    color: #ef4123;
+}
+
+.search-box {
+    background-color: white;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
