@@ -1,0 +1,59 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>PAD {{msg}}</h1>
+
+
+        <div class="form-group">
+
+
+
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Patient Search
+              <span class=""></span></button>
+            <ul class="dropdown-menu">
+              {{#each patients}}
+              <li data-id="{{id}}" class="list-group-item">
+                <a href="/patient/{{last_name}}"> {{first_name}} {{last_name}}</a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <div>
+            <h3>Patient:</h3>
+            <ol id="example-list" class="list-group">
+              <li data-id="{{patients.id}}" class="list-group-item">
+                Patients Name: {{this.first_name}} {{patients.last_name}} 
+                Patients Address: {{patients.address}} 
+                Patients Phone Number: {{patients.phone}} 
+                Patients Sex: {{patients.sex}} 
+                Patients Birthday: {{patients.birth}} 
+                <button class="btn btn-danger float-right">
+                  <a href="/"></a>Clear Field</button>
+              </li>
+            </ol>
+          </div>
+          <img src="/assets/img/burger.png" width="100px" id="cute_burger">
+        </div>
+
+        <div class="form-group">
+          <label for="example-description">Example Description</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description"
+            placeholder="Enter Example Description"></textarea>
+        </div>
+        <button id="submit" class="btn btn-primary float-right">Submit</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>

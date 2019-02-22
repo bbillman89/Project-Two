@@ -25,12 +25,17 @@ module.exports = function (app, ) {
       res.json(patients);
     });
   });
-
   app.get("/api/patient/:id", function (req, res) {
     db.Patient.findOne({ where: { id: req.params.id } }).then(findPatient => {
       res.json(findPatient);
     });
   });
+  app.get("/api/patient/:id", function (req, res) {
+    db.Patient.findOne({ where: { id: req.params.id } }).then(findPatient => {
+      res.json(findPatient);
+    });
+  });
+  
 
   app.post("/api/patient", function (req, res) {
     db.Patient.create({
@@ -93,6 +98,7 @@ module.exports = function (app, ) {
       }
     }).then(updatePatient => {
       res.json(updatePatient);
+        console.log(updatePatient);
     });
   });
   
