@@ -1,0 +1,109 @@
+body{
+    font-family: 'Source Serif Pro', serif;
+    font-weight: bold;    
+}
+#top{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100px;
+    font-family: 'Source Serif Pro', serif;
+    text-shadow: 0px 1px 1px rgb(139, 137, 137);    
+}
+img{
+    vertical-align: top;
+    float:left
+}
+p{
+    display: inline;
+    font-size: 20px;
+}
+#logo{
+    float:left;
+    width: 20%
+}
+#title{
+    margin-top: 10px;
+    padding-top: 30px;
+    text-align: center;
+    padding-right: 55px;
+   
+    
+}
+div h1{
+    display: inline;
+    margin-left: 0px;
+    text-decoration: underline;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1.5px;
+  
+}
+
+
+.form-group{
+    color: rgb(107, 105, 105);
+}
+
+.form-control{
+    width: 200px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    background-color: rgba(255, 255, 255, 0.89)
+}
+label{
+    color:white;
+    margin-right: 10px;
+    font-size: 25px;
+    text-decoration: underline;
+    
+}
+
+table{
+    font-size: 12px;
+    border: solid black 1px;
+}
+tr input{
+    position: absolute;
+    display: block;
+    top:0;
+    left:0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center
+
+}
+table td{
+    position: relative;
+}
+table th{
+    font-size: 20px;
+}
+tr th{
+    background-color: rgb(187, 184, 184);
+}
+#notes{
+    text-align: left;
+}
+#first{
+    font-size: 25px;
+    color: rgb(216, 57, 57);
+}
+#date{
+    height: 40px;
+}
+#date input{
+    text-align: left;
+}
+#submit{
+    background-color:black;
+    border-radius: 5px;
+    color:white;
+    width: 10%;
+    
+}
