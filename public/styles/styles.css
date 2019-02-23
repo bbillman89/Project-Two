@@ -3,7 +3,7 @@
 }
 body{
   /* Need to change the path below later on*/
-  background-image: url(".images/allergy.jpg");
+  background-image: url("../images/allergy.jpg");
   font-family: 'Source Serif Pro', serif;
 
 }
@@ -21,7 +21,7 @@ form{
 }
 .form-control{
   border-top: none;
-  border-left: none;
+  border-left: 50px;
   border-right: none;
   border-bottom: solid black 2px;
 	margin-top: 2px;

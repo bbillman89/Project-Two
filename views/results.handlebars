@@ -15,12 +15,11 @@
     <link href=“https://fonts.googleapis.com/css?family=Roboto:400,500” rel=“stylesheet”>
 
 
-</head>
-<body style="background-image: url(images/allergy.jpg)">
+<div style="background-image: url(images/allergy.jpg)">
 
 <div id="top">
 <div class="container" id="logo">
-    <span><p><img src="images/logo.png" width="100" height="100">Patient</p>
+    <span><p><img src="/images/logo.png" width="100" height="100">Patient</p>
     <br>
     <p>Allergy</p>
     <br>
@@ -34,8 +33,13 @@
 <div class="container mt-3">
     <div class="row justify-content-center">
         <form class="form-group row">
+<<<<<<< HEAD
+            <label for="name">Patient Name: {{this.first_name}} {{this.last_name}}</label>
+            <input type="name" class="form-control mr-3" id="patientName" placeholder="">
+=======
             <label for="name">Patient Name:</label>
             <input type="name" class="form-control mr-3" id="patientName" placeholder="{{patients.name}}">
+>>>>>>> master
     
             <label for="DOB">Date of Birth:</label>
             <input type="DOB" class="form-control" id="DOB" placeholder="">
@@ -103,8 +107,8 @@
 <div class=footer>
     <p>&copy Copyright 2019</p>
 </div> 
-</body>
+</div>
 
 
 
-</html>
+
