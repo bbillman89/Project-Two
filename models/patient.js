@@ -12,6 +12,7 @@ module.exports = function (sequelize, DataTypes) {
         sex: DataTypes.STRING,
         birth: DataTypes.DATEONLY,
         phone: DataTypes.STRING,
+        image: DataTypes.STRING,
     });
     return Patient;
 };

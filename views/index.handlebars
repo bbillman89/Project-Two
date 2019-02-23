@@ -1,7 +1,7 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{{!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
 <div id="home">
   <div class="container">
@@ -29,17 +29,19 @@
             <h3>Patient:</h3>
             <ol id="example-list" class="list-group">
               <li data-id="{{patients.id}}" class="list-group-item">
-                Patients Name: {{this.first_name}} {{patients.last_name}} 
+                Patients Name: {{patients.first_name}} {{patients.last_name}} 
+                Patients Id: {{patients.patient_id}}
                 Patients Address: {{patients.address}} 
                 Patients Phone Number: {{patients.phone}} 
                 Patients Sex: {{patients.sex}} 
                 Patients Birthday: {{patients.birth}} 
                 <button class="btn btn-danger float-right">
-                  <a href="/"></a>Clear Field</button>
+                  <a url="/results"></a>Clear Field</button>
               </li>
             </ol>
           </div>
-          <img src="/assets/img/burger.png" width="100px" id="cute_burger">
+          <div>
+          <img src"{{patients.image}}" width="100px" height="100px">
         </div>
 
         <div class="form-group">
@@ -55,5 +57,5 @@
   </div>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./js/index.js"></script> --}}

@@ -1,55 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>P.A.D.</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/login.js"></script>
-    <link rel="stylesheet" href="../public/styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link href=“https://fonts.googleapis.com/css?family=Roboto:400,500” rel=“stylesheet”>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="../public/js/login.js"></script>
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+<div style="background-image: url(images/allergy.jpg)">
+    <div class="container mt-5 pt-3">
+        <div class="row mt-5 pl-3">
+            <div class="col-md-6 mt-3">
+                <h1 class="stretchLeft">Patient</h1>
+                <h1 class="stretchLeft">Allergy</h1>
+                <h1 class="stretchLeft">Database</h1>
 
-</head>
-<body style="background-image: url(images/allergy.jpg)">
-<div class="container mt-5 pt-3">
-    <div class="row mt-5 pl-3">
-        <div class="col-md-6 mt-3">
-            <h1 class="stretchLeft">Patient</h1>
-            <h1 class="stretchLeft">Allergy</h1>
-            <h1 class="stretchLeft">Database</h1>
-        
-        </div>
-        <div class="col-md-6">
-            <form class="stretchRight">
-                <div class="signIn text-center mb-4">
-                    <h1>Sign In To PAD</h1>
-                </div>
-                <div class="form-group ml-5 mr-5">
-                    <label for="username">Username</label>
-                    <input type="username" class="form-control" id="username" aria-describedby="" placeholder="">
-                </div>
-                <div class="form-group ml-5 mr-5">
-                    <label for="Password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="">
-                </div>
-                <div class="text-center">
-                    <button  type="submit" id="login" class="btn btn-danger mt-3" data-balloon="Login to access PAD database" data-balloon-pos="up">Login</button>
-                </div>
-            </form>
+            </div>
+            <div class="col-md-6">
+                <form class="stretchRight">
+                    <div class="signIn text-center mb-4">
+                        <h1>Sign In To PAD</h1>
+                    </div>
+                    <div class="form-group ml-5 mr-5">
+                        <label for="username">Username</label>
+                        <input type="username" class="form-control" id="username" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group ml-5 mr-5">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" id="login" class="btn btn-danger mt-3"
+                            data-balloon="Login to access PAD database" data-balloon-pos="up">Login</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
+    <div class=footer>
+        <p>&copy Copyright 2019</p>
+    </div>
 </div>
-<div class=footer>
-    <p>&copy Copyright 2019</p>
-</div> 
-</body>
-</html>

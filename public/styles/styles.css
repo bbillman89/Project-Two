@@ -3,7 +3,7 @@
 }
 body{
   /* Need to change the path below later on*/
-  background-image: url(".images/allergy.jpg");
+  background-image: url("../images/allergy.jpg");
   font-family: 'Source Serif Pro', serif;
 
 }
