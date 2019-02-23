@@ -1,5 +1,6 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Serif Pro', serif;
+
     font-size: 20px;
     font-weight: 500;
     background-color: #e6e7e8;
@@ -25,7 +26,7 @@ a{
 
 .date-field{
     letter-spacing: 1.5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Serif Pro', serif;
     font-size: 28px;
 }
 

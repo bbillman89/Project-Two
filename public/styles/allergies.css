@@ -26,8 +26,6 @@ p{
     padding-top: 30px;
     text-align: center;
     padding-right: 55px;
-   
-    
 }
 div h1{
     display: inline;
@@ -35,14 +33,10 @@ div h1{
     text-decoration: underline;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 1.5px;
-  
 }
-
-
 .form-group{
     color: rgb(107, 105, 105);
 }
-
 .form-control{
     width: 200px;
     border-left: none;
@@ -58,7 +52,6 @@ label{
     text-decoration: underline;
     
 }
-
 table{
     font-size: 12px;
     border: solid black 1px;
@@ -76,7 +69,6 @@ tr input{
     box-sizing: border-box;
     font-size: 20px;
     text-align: center
-
 }
 table td{
     position: relative;
@@ -105,7 +97,6 @@ tr th{
     border-radius: 5px;
     color:white;
     width: 10%;
-    
 }
 .footer {
     position: fixed;
@@ -116,5 +107,4 @@ tr th{
     color: gray;
     text-align: center;
     font-size: 5px;
-    
-  }
+}
