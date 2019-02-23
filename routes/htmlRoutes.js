@@ -7,7 +7,7 @@ module.exports = function(app) {
   // Load index page
   app.get("/findAll", function(req, res) {
     db.Patient.findAll({}).then(function(dbPatients) {
-      res.render("index1", {
+      res.render("index1",  {
         msg: "Patient Information",
         patients: dbPatients
       });
