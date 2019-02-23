@@ -5,14 +5,12 @@ body{
   /* Need to change the path below later on*/
   background-image: url(".images/allergy.jpg");
   font-family: 'Source Serif Pro', serif;
-
 }
 form{
   background:#7f7f7f;
   background:white;
-  height: 600px;
+  height: 350px;
   border-radius: 15px;
-  
 }
 .btn{
   width: 30%;
@@ -24,10 +22,10 @@ form{
   border-left: none;
   border-right: none;
   border-bottom: solid black 2px;
-	margin-top: 2px;
-	background-color: transparent
-
+  margin-top: 2px;
+  background-color: transparent
 }
+
 label{
   font-size: 18px;
   font-family: 'Abril Fatface', cursive;
@@ -41,21 +39,27 @@ label{
   background-color:transparent;
   color: white;
   text-align: center;
-  
 }
+
  p{
   font-family: 'Source Serif Pro', serif;
   color: rgba(212, 211, 211, 0.288) 
  }
+
 .signIn{
   font-family: 'Abril Fatface', cursive;
 }
+
 h3{
 	display:inline-block;
 	letter-spacing: 2px;
 	font-size: 55px;
 	font-family: 'Source Serif Pro', serif;
 }
+
+
+/*====================Animation Below======================*/
+
 .stretchLeft{
   color: white;
 	font-family: 'Abril Fatface', cursive;
