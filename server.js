@@ -23,18 +23,17 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-var apiroute = require("./routes/apiRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
-//console.log("look here" + apiroute);
 
 var syncOptions = { force: false };
 
 //If running a test, set syncOptions.force to true
 //clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-   syncOptions.force = true;
-}
+// if (process.env.NODE_ENV === "test") {
+//    syncOptions.force = true;
+// }
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
