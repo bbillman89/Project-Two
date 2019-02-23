@@ -8,17 +8,17 @@ module.exports = function(app) {
   app.get("/findAll", function(req, res) {
     db.Patient.findAll({}).then(function(dbPatients) {
       res.render("index", {
-        msg: "Patient Information",
+       
         patients: dbPatients
-      });
+      })
     });
   });
       
   
-  app.get("/patient/:last_name", function(req, res) {
+  app.get("/dashboard/:last_name", function(req, res) {
     
     db.Patient.findOne({ where: { last_name: req.params.last_name } }).then(function(dbPatients) {
-      console.log(dbPatients);
+      // console.log(dbPatients);
     
       res.render("index", {
         patients: dbPatients
