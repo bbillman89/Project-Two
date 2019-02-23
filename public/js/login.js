@@ -1,6 +1,7 @@
 $(document).ready(function(){
     
-    function loginValid(){
+    function loginValid(event){
+        event.preventDefault();
         var userName = $("#username").val();
         var password = $("#password").val();
         //values are hardcorded until connection with db is made
@@ -21,9 +22,9 @@ $(document).ready(function(){
         function loadPage(dbUN, dbPW){
             if (userName === dbUN && password === dbPW){
                 //open dashboard
-                let redirect = window.location.href + "test";
-                alert(redirect);
-                window.location.href = "http://localhost:3000/test";
+                let redirect = window.location.href + "dashboard";
+                console.log(redirect);
+                window.location.assign(redirect);
     
             } else {
                 alert("invalid login information");
