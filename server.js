@@ -27,7 +27,10 @@ require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 var syncOptions = { force: false };
 
 //If running a test, set syncOptions.force to true
