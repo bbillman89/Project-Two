@@ -4,10 +4,24 @@ var path = require("path");
 
 module.exports = function(app) {
 
+  //Load login page
+  app.get("/", function(req, res){
+    res.render("login")
+  })
+
+  //Load login page
+  app.get("/dashboard", function(req, res){
+    res.render("dashboard")
+  })
+
+  app.get("/results", function(req, res){
+    res.render("results")
+  })
+
   // Load index page
   app.get("/findAll", function(req, res) {
     db.Patient.findAll({}).then(function(dbPatients) {
-      res.render("index1", {
+      res.render("index1",  {
         msg: "Patient Information",
         patients: dbPatients
       });
