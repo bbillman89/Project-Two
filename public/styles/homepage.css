@@ -46,6 +46,9 @@ a{
     background-color: white;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+.form-control{
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    
 }
