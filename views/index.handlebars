@@ -96,9 +96,11 @@
           <div class="p-2 bd-highlight pl-5">
   
             <div class="dropdown">
-              <button class="btn btn-danger dropdown-toggle ml-2" type="button" data-toggle="dropdown">Patient Search
-                <span class=""></span></button>
-              <ul class="dropdown-menu">
+              <button class="btn btn-danger dropdown-toggle ml-2" type="button" data-toggle="dropdown">
+                Patient Search
+              </button>
+
+              <ul class="dropdown-menu bg-warning">
                 {{#each patients}}
                 <li data-id="{{patienet_id}}" class="list-group-item">
                   <a href="/dashboard/{{last_name}}"> {{first_name}} {{last_name}}</a>
@@ -145,26 +147,48 @@
       {{!-- Add Patient --}}
   
       <div class="container mt-5" style="background-color:white">
-        <div class="row justify-content-center">
-          <p class="text-center title">Add Patient</p>
+
+        <h1 class="text-center">Add Patient</h1>
+
+        <div class="row mt-3">
+          <form>
+            <label class="ml-3">First Name:</label>
+            <input id="first_name" type="text">
+        
+            <label class="ml-3">Last Name:</label>
+            <input id="last_name" type="text">
+        
+            <label class="ml-3">Address:</label>
+            <input id="address" type="text">
+          </form>
         </div>
-  
-        <form class="needs-validation" novalidate>
-          <div class="form-row d-flex align-items-center">
-            <div class="col-md-4 mb-3 ">
-              <label for="firstname">First name</label>
-              <input type="text" class="form-control" id="firstname" placeholder="Firstname" required>
-            </div>
-  
-  
-            <div class="col-md-4 mb-3">
-              <label for="lastname">Last name</label>
-              <input type="text" class="form-control" id="lastname" placeholder="Lastname" required>
-            </div>
-  
-          </div>
-        </form>
+
+        <div class="row mt-3">
+          <form>
+            <label class="ml-5">Sex:</label>
+            <input id="sex" type="text" class="ml-4">
+        
+            <label class="ml-3">Birthday:</label>
+            <input id="birth" type="date" class="ml-4">
+        
+            <label class="ml-3">Phone Number:</label>
+            <input id="phone" type="text">
+        
+          </form>
+        </div>
+
+        <div class="row mt-3">
+          <form>
+            <label class="ml-5">Image:</label>
+            <input id="image" type="text">
+        
+            <button type="button" class="btn btn-danger ml-5" id="new_patient" value="new patient">Add New Patient</button>
+          </form>
+        </div>
       </div>
+        
+        
+        
   </div>
 
 
