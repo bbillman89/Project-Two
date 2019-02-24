@@ -30,9 +30,18 @@ module.exports = function (app, ) {
       res.json(findPatient);
     });
   });
-  app.get("/api/patient/:id", function (req, res) {
-    db.Patient.findOne({ where: { id: req.params.id } }).then(findPatient => {
-      res.json(findPatient);
+  //added
+  app.get("/api/antigen", function (req, res) {
+    db.antigen.findAll({}).then(antigens => {
+      // console.log("dm" + antigens);
+      res.json(antigens);
+    });
+  });
+  //changed 
+  app.get("/api/antigen/:patient_id", function (req, res) {
+    db.antigen.findOne({ where: { patient_id: req.params.patient_id } }).then(findAntigen => {
+      console.log("dm" + findAntigen);
+      res.json(findAntigen);
     });
   });
   
@@ -82,7 +91,7 @@ module.exports = function (app, ) {
     });
   })
 
-  // PUT route for updating todos. We can get the updated todo data from req.body
+  // PUT route for updating patient information. We can get the updated  data from req.body
   app.put("/api/patient/:patient_id", function(req, res) {
     db.Patient.update({
     
@@ -98,7 +107,7 @@ module.exports = function (app, ) {
       }
     }).then(updatePatient => {
       res.json(updatePatient);
-        console.log(updatePatient);
+        // console.log(updatePatient);
     });
   });
   

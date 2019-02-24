@@ -1,44 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>P.A.D.</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../styles/allergies.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link href=“https://fonts.googleapis.com/css?family=Roboto:400,500” rel=“stylesheet”>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<div style="background-image: url(images/allergy.jpg)">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../styles/allergies.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link href=“https://fonts.googleapis.com/css?family=Roboto:400,500” rel=“stylesheet”>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/popper.min.js">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/dropdown.js/0.0.2dev/jquery.dropdown.min.js">
+{{!-- <div style="background-image: url(images/allergy.jpg)"> 
+Moved this to allergy.css file--}}
 
 <div id="top">
-<div class="container" id="logo">
-    <span><p><img src="/images/logo.png" width="100" height="100">Patient</p>
-    <br>
-    <p>Allergy</p>
-    <br>
-    <p>Database</p></span>
+    <div class="container" id="logo">
+        <span>
+            <p><img src="/images/logo.png" width="100" height="100">Patient</p>
+            <br>
+            <p>Allergy</p>
+            <br>
+            <p>Database</p>
+        </span>
+    </div>
+    <div class="container" id="title">
+        <h1>Tested & Treated Allergies</h1>
+    </div>
 </div>
-<div class="container" id="title">
-    <h1>Tested & Treated Allergies</h1>
-</div>
-</div>
- 
+
 <div class="container mt-3">
     <div class="row justify-content-center">
-        <form class="form-group row">
-            <label for="name">Patient Name:</label>
+        <form class="form-group row justify-content-center">
 
-            <input type="name" class="form-control mr-3" id="patientName" placeholder="{{patients.first_name}}{{patients.last_name}}">
-            <input type="name" class="form-control mr-3" id="patientName" placeholder="{{patients.name}}">
-    
-            <label for="DOB">Date of Birth:</label>
-            <input type="DOB" class="form-control" id="DOB" placeholder="{{patients.birth}}">
+            {{!-- add drop down --}}
+            <div class="dropdown">
+                <button class="btn bg-light text-dark dropdown-toggle" type="button" data-toggle="dropdown">Patient
+                    Search
+                    <span class=""></span></button>
+                <ul class="dropdown-menu">
+                    {{#each patients}}
+                    <li data-id="{{id}}" class="list-group-item">
+                        <a href="/result/{{patient_id}}"> {{first_name}} {{last_name}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+
+                <h4 class="name">Name: {{patients.first_name}} {{patients.last_name}}</h4>
+                {{!-- <input type="DOB" class="form-control" id   ="DOB" placeholder=""> --}}
+            </div>
         </form>
     </div>
 </div>
@@ -48,21 +67,23 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                <th id="first" scope="col">P.A.D.</th>
-                <th scope="col">CAT</th>
-                <th scope="col">DOG</th>
-                <th scope="col">EPIC</th>
-                <th scope="col">GRASS</th>
-                <th scope="col">PIG</th>
-                <th scope="col">RAG</th>
-                <th scope="col">TREE</th>
-                <th scope="col">OAK</th>
-                <th scope="col">PLANT</th>
+                    <th id="first" scope="col">P.A.D.</th>
+                    <th scope="col">CAT</th>
+                    <th scope="col">DOG</th>
+                    <th scope="col">EPIC</th>
+                    <th scope="col">GRASS</th>
+                    <th scope="col">PIG</th>
+                    <th scope="col">RAG</th>
+                    <th scope="col">TREE</th>
+                    <th scope="col">OAK</th>
+                    <th scope="col">PLANT</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row" data-balloon="Results from Allergy Test, 1 being the least severe, 12 being the most" data-balloon-pos="up">Test Results (1-12)</th>
+                    <th scope="row"
+                        data-balloon="Results from Allergy Test, 1 being the least severe, 12 being the most"
+                        data-balloon-pos="up">Test Results (1-12)</th>
                     <td><input type="number" min="0" max="12"></td>
                     <td><input type="number" min="0" max="12"></td>
                     <td><input type="number" min="0" max="12"></td>
@@ -74,7 +95,8 @@
                     <td><input type="number" min="0" max="12"></td>
                 </tr>
                 <tr>
-                    <th scope="row" data-balloon="How much to dilute the dose for proper treatment" data-balloon-pos="up">Dilution Dosage (1-5)</th>
+                    <th scope="row" data-balloon="How much to dilute the dose for proper treatment"
+                        data-balloon-pos="up">Dilution Dosage (1-5)</th>
                     <td><input type="number" min="0" max="5"></td>
                     <td><input type="number" min="0" max="5"></td>
                     <td><input type="number" min="0" max="5"></td>
@@ -86,7 +108,8 @@
                     <td><input type="number" min="0" max="5"></td>
                 </tr>
                 <tr height="100">
-                    <th scope="row" colspan="1" data-balloon="Notes for future use" data-balloon-pos="up">Notes:</th>
+                    <th scope="row" colspan="1" data-balloon="Notes for future use" data-balloon-pos="up">Notes:
+                    </th>
                     <td colspan="10"><input id="notes" type="text"></td>
                 </tr>
                 <tr>
@@ -96,15 +119,66 @@
                 </tr>
             <tbody>
         </table>
-        <input id="submit" type="submit" value="Submit">
-    </form> 
+    </form>
 </div>
+
+<div class= "container" id= "dropdownContain justify-content-center">
+    <h4 class="name">ID: {{patients.patient_id}} Name: {{patients.first_name}} {{patients.last_name}}</h4>
+    
+
+        <div class="col-6 dropdown">
+            <button class="btn bg-light text-dark dropdown-toggle" type="button" data-toggle="dropdown">Tests
+                Search
+                <span class=""></span></button>
+            <ul class="dropdown-menu">
+                {{#each antigens}}
+                <li data-id="{{id}}" class="list-group-item">
+                    <a href="/result/{{patient_id}}"> {{patient_id}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    
+    <div class="col-6 justify-content-center">
+        <ul class="name">
+            <li>cat: {{antigen.cat}}</li>
+            <li>dog: {{antigen.dog}}</li>
+            <li>epic: {{antigen.epic}}</li>
+            <li>grass: {{antigen.grass}}</li>
+            <li>pig: {{antigen.pig}}</li>
+        </ul>
+
+    </div>
+<form class="form-group row justify-content-center">
+
+            {{!-- add drop down --}}
+            <div class="dropdown">
+                <button class="btn bg-light text-dark dropdown-toggle" type="button" data-toggle="dropdown">Patient
+                    Search
+                    <span class=""></span></button>
+                <ul class="dropdown-menu">
+                    {{#each antigens}}
+                    <li data-id="{{id}}" class="list-group-item">
+                        <a href="/testResult/"{{patient_id}}> {{cat}} {{dog}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+
+                <h4 class="name">Name: {{patients.first_name}} {{patients.last_name}}</h4>
+                {{!-- <input type="DOB" class="form-control" id   ="DOB" placeholder=""> --}}
+            </div>
+        </form>
+    <div>
+        <input id="submit" type="submit" value="Submit">
+    </div>
+</div>
+
+
 <div id="example"></div>
 <div class=footer>
     <p>&copy Copyright 2019</p>
-</div> 
 </div>
-
-
-
-
+{{!-- </div> --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.12/bootstrap-native-v4.min.js"></script>
