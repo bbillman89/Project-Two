@@ -74,6 +74,42 @@ module.exports = function (app, ) {
     });
   });
 
+  app.post("/api/antigen", function (req, res) {
+    db.antigen.create({
+      cat: req.body.cat,
+      dog: req.body.dog,
+      epic: req.body.epic,
+      grass: req.body.grass,
+      pig: req.body.pig,
+      rag: req.body.rag,
+      tree: req.body.tree,
+      oak: req.body.oak,
+      plant: req.body.plant,
+      patient_id:  req.body.patient_id,
+      notes: req.body.notes
+    }).then(newAntigen => {
+      res.json(newAntigen);
+    });
+  });
+
+  app.post("/api/dilution", function (req, res) {
+    db.dilution.create({
+      cat: req.body.cat,
+      dog: req.body.dog,
+      epic: req.body.epic,
+      grass: req.body.grass,
+      pig: req.body.pig,
+      rag: req.body.rag,
+      tree: req.body.tree,
+      oak: req.body.oak,
+      plant: req.body.plant,
+      patient_id:  req.body.patient_id,
+      notes: req.body.notes
+    }).then(newDil => {
+      res.json(newDil);
+    });
+  });
+
   app.delete("/api/patient/:patient_id", function (req, res) {
     db.Patient.destroy({ where: { patient_id: req.params.patient_id } }).then(deletePatient => {
       res.json(deletePatient);
