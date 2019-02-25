@@ -1,218 +1,239 @@
 {{!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../styles/homepage.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  {{!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/popper.min.js">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/dropdown.js/0.0.2dev/jquery.dropdown.min.js">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
+  {{!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
+  <script src="./js/index.js"></script>
+  <link rel="stylesheet" href="../styles/homepage.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 
 
-  <!-- This is the top navbar -->
-  
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand"></a> <img src="/images/logo.png" width="30" height="30"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse d-flex ">
-        <ul class="navbar-nav mr-auto w-100 justify-content-end">
-          <li class="nav-item ">
-            <a class="nav-link" href="#"> account </a>
-          </li>
-  
-          <li class="nav-item ">
-            <a class="nav-link" href="#"> / </a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link" href="#">sign-out</a>
-          </li>
-        </ul>
+</head>
+
+
+<!-- This is the top navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand"></a> <img src="/images/logo.png" width="30" height="30"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse d-flex ">
+      <ul class="navbar-nav mr-auto w-100 justify-content-end">
+        <li class="nav-item ">
+          <a class="nav-link" href="#"> account </a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="#"> / </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">sign-out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="home">
+  <div class="container date-div">
+    <h1 class="mt-4">Patient Alergy Database</h1>
+  </div>
+
+  {{!-- Date field --}}
+
+  <div class="container mt-5 " style="background-color:white">
+    <div class="row">
+      <div class="container ">
+        <div class="row date-field d-flex justify-content-center mt-3">
+          <p>Friday Feburary 15th, 2019 | 12:58 PM</p>
+        </div>
       </div>
     </div>
-  </nav>
-  
-  <div id="home">
-    <div class="container date-div">
-      <h1 class="mt-4">Patient Alergy Database</h1>
+  </div>
+
+  {{!-- Pollen Field --}}
+
+  <div class="container">
+
+    <div class="container pollen-div mt-5">
+      <div class="row justify-content-center">
+        <p class="title">Today's Pollen Report</p>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-2">
+        <div class="col-3 text-center">Col 1</div>
+        <div class="col-3 text-center">Col 2</div>
+        <div class="col-3 text-center">Col 3</div>
+        <div class="col-3 text-center">Col 4</div>
+      </div>
     </div>
-  
-    {{!-- Date field --}}
-  
-    <div class="container mt-5 " style="background-color:white">
-      <div class="row">
-        <div class="container ">
-          <div class="row date-field d-flex justify-content-center mt-3">
-            <p>Friday Feburary 15th, 2019 | 12:58 PM</p>
+  </div>
+
+  {{!-- Search Patient --}}
+
+  <div class="container patient-div " style="background-color:white">
+
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <h3>Patient Look Up</h3>
+    </div>
+
+
+    {{!-- Patiennt dropdown button --}}
+
+    <div class="row">
+
+      <div class="d-flex bd-highlight mb-3 w-100">
+        <div class="p-2 bd-highlight pl-5">
+
+          <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle ml-2" type="button" data-toggle="dropdown">
+              Patient Search
+            </button>
+
+            <ul class="dropdown-menu bg-warning">
+              {{#each patients}}
+              <li data-id="{{patient_id}}" class="list-group-item">
+                <a href="/dashboard/{{last_name}}"> {{first_name}} {{last_name}}</a>
+              </li>
+              {{/each}}
+            </ul>
           </div>
-        </div>
-      </div>
-    </div>
-  
-    {{!-- Pollen Field --}}
-  
-    <div class="container">
-  
-      <div class="container pollen-div mt-5">
-        <div class="row justify-content-center">
-          <p class="title">Today's Pollen Report</p>
-        </div>
-  
-        <div class="row d-flex justify-content-center mt-2">
-          <div class="col-3 text-center">Col 1</div>
-          <div class="col-3 text-center">Col 2</div>
-          <div class="col-3 text-center">Col 3</div>
-          <div class="col-3 text-center">Col 4</div>
-        </div>
-      </div>
-    </div>
-  
-    {{!-- Search Patient --}}
-  
-    <div class="container patient-div " style="background-color:white">
-  
-      <div class="row mt-5 d-flex align-items-center justify-content-center">
-        <h3>Patient Look Up</h3>
-      </div>
-  
-  
-      {{!-- Patiennt dropdown button --}}
-  
-      <div class="row">
-  
-        <div class="d-flex bd-highlight mb-3 w-100">
-          <div class="p-2 bd-highlight pl-5">
-  
-            <div class="dropdown">
-              <button class="btn btn-danger dropdown-toggle ml-2" type="button" data-toggle="dropdown">
-                Patient Search
-              </button>
 
-              <ul class="dropdown-menu bg-warning">
-                {{#each patients}}
-                <li data-id="{{patient_id}}" class="list-group-item">
-                  <a href="/dashboard/{{last_name}}"> {{first_name}} {{last_name}}</a>
-                </li>
-                {{/each}}
-              </ul>
-            </div>
-  
-          </div>
-  
-          {{!-- Patient informationn displayed here --}}
-  
-          <div class="ml-auto p-2 bd-highlight pr-5">
-  
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img
-                    src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/05/22/11/davidbeckham.jpg?w968"
-                    class="card-img rounded" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">{{patients.first_name}} {{patients.last_name}}</h5>
-  
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Id: {{patients.patient_id}}</li>
-                      <li class="list-group-item">Address: {{patients.address}}</li>
-                      <li class="list-group-item">Phone Number: {{patients.phone}}</li>
-                      <li class="list-group-item">Sex: {{patients.sex}}</li>
-                      <li class="list-group-item">Birthday: {{patients.birth}}</li>
-                    </ul>
-                  </div>
+        </div>
+
+        {{!-- Patient informationn displayed here --}}
+
+        <div class="ml-auto p-2 bd-highlight pr-5">
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img
+                  src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/05/22/11/davidbeckham.jpg?w968"
+                  class="card-img rounded" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{patients.first_name}} {{patients.last_name}}</h5>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Id: {{patients.patient_id}}</li>
+                    <li class="list-group-item">Address: {{patients.address}}</li>
+                    <li class="list-group-item">Phone Number: {{patients.phone}}</li>
+                    <li class="list-group-item">Sex: {{patients.sex}}</li>
+                    <li class="list-group-item">Birthday: {{patients.birth}}</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  
-  
     </div>
-      
-      {{!-- Add Patient --}}
-  
-      <div class="container mt-5" style="background-color:white">
 
-        <h1 class="text-center">Add Patient</h1>
 
-        <div class="row mt-3">
-          <form>
-            <label class="ml-3">First Name:</label>
-            <input id="first_name" type="text">
-        
-            <label class="ml-3">Last Name:</label>
-            <input id="last_name" type="text">
-        
-            <label class="ml-3">Address:</label>
-            <input id="address" type="text">
-          </form>
-        </div>
+  </div>
 
-        <div class="row mt-3">
-          <form>
-            <label class="ml-5">Sex:</label>
-            <input id="sex" type="text" class="ml-4">
-        
-            <label class="ml-3">Birthday:</label>
-            <input id="birth" type="date" class="ml-4">
-        
-            <label class="ml-3">Phone Number:</label>
-            <input id="phone" type="text">
-        
-          </form>
-        </div>
+  {{!-- Add Patient --}}
 
-        <div class="row mt-3">
-          <form>
-            <label class="ml-5">Image:</label>
-            <input id="image" type="text">
-        
-            <button type="button" class="btn btn-danger ml-5" id="new_patient" value="new patient">Add New Patient</button>
-          </form>
-        </div>
-      </div>
-        
-        
-        
+  <div class="container mt-5" style="background-color:white">
+
+    <h1 class="text-center">Add Patient</h1>
+
+    <div class="row mt-3">
+      <form>
+        <label class="ml-3">First Name:</label>
+        <input id="first_name" type="text">
+
+        <label class="ml-3">Last Name:</label>
+        <input id="last_name" type="text">
+
+        <label class="ml-3">Address:</label>
+        <input id="address" type="text">
+      </form>
+    </div>
+
+    <div class="row mt-3">
+      <form>
+        <label class="ml-5">Sex:</label>
+        <input id="sex" type="text" class="ml-4">
+
+        <label class="ml-3">Birthday:</label>
+        <input id="birth" type="date" class="ml-4">
+
+        <label class="ml-3">Phone Number:</label>
+        <input id="phone" type="text">
+
+      </form>
+    </div>
+
+    <div class="row mt-3">
+      <form>
+        <label class="ml-5">Image:</label>
+        <input id="image" type="text">
+
+        <button type="button" class="btn btn-danger ml-5" id="new_patient" value="new patient">Add New Patient</button>
+      </form>
+    </div>
   </div>
 
 
-        
+
+</div>
 
 
 
 
 
-      
-        
-     
 
 
 
-      
-      
-    
-  
 
 
 
-   
-      {{!-- <div class="row">
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="row">
         <div class="col-8 offset-2">
          
 

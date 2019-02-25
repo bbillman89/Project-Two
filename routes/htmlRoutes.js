@@ -43,22 +43,22 @@ module.exports = function (app) {
         })
       });
   });
-  app.get("/aResults", function (req, res) {
-    db.antigen.findAll({}).then(function (dbAntigen) {
-      // console.log("dmm" + dbAntigen);
-      res.render("results", {
-        antigens: dbAntigen
-      })
-    });
-  });
-  app.get("/dResults", function (req, res) {
-    db.dilution.findAll({}).then(function (dbDilution) {
-      // console.log("dmm" + dbDilution);
-      res.render("results", {
-        dilutions: dbDilution
-      })
-    });
-  });
+  // app.get("/aResults", function (req, res) {
+  //   db.antigen.findAll({}).then(function (dbAntigen) {
+  //     // console.log("dmm" + dbAntigen);
+  //     res.render("results", {
+  //       antigens: dbAntigen
+  //     })
+  //   });
+  // });
+  // app.get("/dResults", function (req, res) {
+  //   db.dilution.findAll({}).then(function (dbDilution) {
+  //     // console.log("dmm" + dbDilution);
+  //     res.render("results", {
+  //       dilutions: dbDilution
+  //     })
+  //   });
+  // });
 
   app.get("/results/:last_name", function(req, res) {
     db.Patient.findOne({ where: { last_name: req.params.last_name  } }).then(function(dbPatients) {
