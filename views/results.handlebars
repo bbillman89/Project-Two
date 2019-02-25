@@ -2,7 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
@@ -48,10 +49,13 @@ Moved this to allergy.css file--}}
                     Search
                     <span class=""></span></button>
                 <ul class="dropdown-menu">
+
                     {{#each patients}}
-                    <li data-id="{{id}}" class="list-group-item">
-                        <a href="/result/{{patient_id}}"> {{first_name}} {{last_name}}</a>
+
+                    <li data-id="{{patient_id}}" class="list-group-item">
+                        <a href="..\results/{{last_name}}"> {{first_name}} {{last_name}}</a>
                     </li>
+
                     {{/each}}
                 </ul>
 
@@ -61,6 +65,7 @@ Moved this to allergy.css file--}}
         </form>
     </div>
 </div>
+
 
 <div class="container" id="formContain">
     <form>
@@ -122,11 +127,12 @@ Moved this to allergy.css file--}}
     </form>
 </div>
 
-<div class= "container" id= "dropdownContain justify-content-center">
-    <h4 class="name">ID: {{patients.patient_id}} Name: {{patients.first_name}} {{patients.last_name}}</h4>
-    
+<div class="container" id="dropdownContain justify-content-center">
+    <h4 class="name">ID: {{{patients.patient_id}}} Name: {{{patients.first_name}}} {{{patients.last_name}}}</h4>
 
-        <div class="col-6 dropdown">
+    {{!-- Tried to have another drop down for the patient_id but it will only let me use one dropdrown at a time. --}}
+
+    {{!-- <div class="col-6 dropdown">
             <button class="btn bg-light text-dark dropdown-toggle" type="button" data-toggle="dropdown">Tests
                 Search
                 <span class=""></span></button>
@@ -137,37 +143,42 @@ Moved this to allergy.css file--}}
                 </li>
                 {{/each}}
             </ul>
-        </div>
+        </div> --}}
     
+    <a class="name" href="/aResults/{{patients.patient_id}}">Test Results For
+        Antigens For Patient ID:{{patients.patient_id}}</a></h4>
+        <br>
     <div class="col-6 justify-content-center">
-        <ul class="name">
-            <li>cat: {{antigen.cat}}</li>
-            <li>dog: {{antigen.dog}}</li>
-            <li>epic: {{antigen.epic}}</li>
-            <li>grass: {{antigen.grass}}</li>
-            <li>pig: {{antigen.pig}}</li>
+        <ul class="name" id="antigens">
+            <li>CAT: {{antigens.cat}}</li>
+            <li>DOG: {{antigens.dog}}</li>
+            <li>EPIC: {{antigens.epic}}</li>
+            <li>GRASS: {{antigens.grass}}</li>
+            <li>PIG: {{antigens.pig}}</li>
+            <li>RAG: {{antigens.rag}}</li>
+            <li>TREE: {{antigens.tree}}</li>
+            <li>OAK: {{antigens.oak}}</li>
+            <li>PLANT: {{antigens.plant}}</li>
         </ul>
-
-    </div>
-<form class="form-group row justify-content-center">
-
-            {{!-- add drop down --}}
-            <div class="dropdown">
-                <button class="btn bg-light text-dark dropdown-toggle" type="button" data-toggle="dropdown">Patient
-                    Search
-                    <span class=""></span></button>
-                <ul class="dropdown-menu">
-                    {{#each antigens}}
-                    <li data-id="{{id}}" class="list-group-item">
-                        <a href="/testResult/"{{patient_id}}> {{cat}} {{dog}}</a>
-                    </li>
-                    {{/each}}
+        <br>
+        <h4><a class="name" href="/dResults/{{patients.patient_id}}">Antigen Treatment Consentrate Dilution
+                Ratio For Patient ID:{{patients.patient_id}}</a>
+            <h4>
+                <br>
+                <ul class="name" id="dilutions">
+                    <li>CAT: {{dilutions.cat}}</li>
+                    <li>DOG: {{dilutions.dog}}</li>
+                    <li>EPIC: {{dilutions.epic}}</li>
+                    <li>GRASS: {{dilutions.grass}}</li>
+                    <li>PIG: {{dilutions.pig}}</li>
+                    <li>RAG: {{dilutions.rag}}</li>
+                    <li>TREE: {{dilutions.tree}}</li>
+                    <li>OAK: {{dilutions.oak}}</li>
+                    <li>PLANT: {{dilutions.plant}}</li>
                 </ul>
+                <br>
+    </div>
 
-                <h4 class="name">Name: {{patients.first_name}} {{patients.last_name}}</h4>
-                {{!-- <input type="DOB" class="form-control" id   ="DOB" placeholder=""> --}}
-            </div>
-        </form>
     <div>
         <input id="submit" type="submit" value="Submit">
     </div>
@@ -181,4 +192,5 @@ Moved this to allergy.css file--}}
 {{!-- </div> --}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.12/bootstrap-native-v4.min.js"></script>
+<script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.12/bootstrap-native-v4.min.js"></script>

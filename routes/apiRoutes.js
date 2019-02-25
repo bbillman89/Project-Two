@@ -37,14 +37,27 @@ module.exports = function (app, ) {
       res.json(antigens);
     });
   });
-  //changed 
+  //added 
   app.get("/api/antigen/:patient_id", function (req, res) {
     db.antigen.findOne({ where: { patient_id: req.params.patient_id } }).then(findAntigen => {
-      console.log("dm" + findAntigen);
+      // console.log("dm" + findAntigen);
       res.json(findAntigen);
     });
   });
-  
+  //added
+  app.get("/api/dilution", function (req, res) {
+    db.dilution.findAll({}).then(dilutions => {
+      console.log("dm" + dilutions);
+      res.json(dilutions);
+    });
+  });
+  //added
+  app.get("/api/dilution/:patient_id", function (req, res) {
+    db.dilution.findOne({ where: { patient_id: req.params.patient_id } }).then(findDilution => {
+      // console.log("dm" + findDilution);
+      res.json(findDilution);
+    });
+  });
 
   app.post("/api/patient", function (req, res) {
     db.Patient.create({
