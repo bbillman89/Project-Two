@@ -20,7 +20,7 @@
             <ul class="dropdown-menu">
               {{#each patients}}
               <li data-id="{{id}}" class="list-group-item">
-                <a href="/patient/{{last_name}}"> {{first_name}} {{last_name}}</a>
+                <a href="/dashboard/{{last_name}}"> {{first_name}} {{last_name}}</a>
               </li>
               {{/each}}
             </ul>
@@ -28,32 +28,36 @@
           <div>
             <h3>Patient:</h3>
             <ol id="example-list" class="list-group">
-              <li data-id="{{patients.id}}" class="list-group-item">
-                Patients Name: {{patients.first_name}} {{patients.last_name}} 
-                Patients Address: {{patients.address}} 
-                Patients Phone Number: {{patients.phone}} 
-                Patients Sex: {{patients.sex}} 
-                Patients Birthday: {{patients.birth}} 
-                <button class="btn btn-danger float-right">
-                  <a href="/"></a>Clear Field</button>
-              </li>
+              {{!-- <li data-id="{{patients.id}}" class="list-group-item"> --}}
+              <li>Name: {{patients.first_name}} {{patients.last_name}} </li>
+              <li>Address: {{patients.address}} </li>
+              <li>Patient ID: {{patients.Patients_id}} </li>
+              <li>Phone Number: {{patients.phone}} </li>
+              <li>Sex: {{patients.sex}} </li>
+              <li>Birthday: {{patients.birth}} </li>
             </ol>
+            <br>
+            <button class="btn btn-danger float-right">
+
+              <a href="/"></a>Clear Field</button>
+
+
+            <div>
+              <img src="{{patients.image}}" width="100px" height="100px">
+            </div>
+
+            <div class="form-group">
+              <label for="example-description">Example Description</label>
+              <textarea class="form-control" id="example-description" aria-describedby="example-description"
+                placeholder="Enter Example Description"></textarea>
+            </div>
+            <button id="submit" class="btn btn-primary float-right">Submit</button>
+
+
           </div>
-          <img src="/assets/img/burger.png" width="100px" id="cute_burger">
         </div>
-
-        <div class="form-group">
-          <label for="example-description">Example Description</label>
-          <textarea class="form-control" id="example-description" aria-describedby="example-description"
-            placeholder="Enter Example Description"></textarea>
-        </div>
-        <button id="submit" class="btn btn-primary float-right">Submit</button>
-
-
       </div>
     </div>
-  </div>
-</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
