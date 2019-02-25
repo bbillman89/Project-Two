@@ -13,34 +13,27 @@ module.exports = function (app) {
   app.get("/results", function(req, res){
     res.render("results")
   })
+  */
 
   // Load index page
   app.get("/dashboard", function(req, res) {
     db.Patient.findAll({}).then(function(dbPatients) {
       res.render("index", {
-     
-
-
-  // Load index page for testing
-  // app.get("/results", function(req, res) {
-  //   db.Patient.findAll({}).then(function(dbPatients) {
-  //     res.render("index1", {
-
-  //       patients: dbPatients
-  //     })
-  //   });
-  // });
-
+         patients: dbPatients
+       })
+     });
+  });
+  
 
   app.get("/dashboard/:last_name", function(req, res) {
     db.Patient.findOne({ where: { last_name: req.params.last_name } }).then(function(dbPatients) {
       // console.log(dbPatients);
-      res.render("index1", {
+      res.render("index", {
         patients: dbPatients
       })
     });
   });
-  */
+  
   
 
     app.get("/results", function(req, res){
@@ -99,7 +92,7 @@ module.exports = function (app) {
   })
 
   app.get('/dashboard', function(req, res){
-    res.render("dashboard");
+    res.render("index");
   });
 
 
