@@ -9,6 +9,16 @@ module.exports = function (app) {
     res.render("login")
   })
 
+/*
+  app.get("/results", function(req, res){
+    res.render("results")
+  })
+
+  // Load index page
+  app.get("/dashboard", function(req, res) {
+    db.Patient.findAll({}).then(function(dbPatients) {
+      res.render("index", {
+     
 
 
   // Load index page for testing
@@ -30,6 +40,7 @@ module.exports = function (app) {
       })
     });
   });
+  */
   
 
     app.get("/results", function(req, res){
