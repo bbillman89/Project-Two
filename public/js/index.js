@@ -1,99 +1,123 @@
-// Get references to page elements
-// var $exampleText = $("#example-text");
-// var $exampleDescription = $("#example-description");
-// var $submitBtn = $("#submit");
-// var $exampleList = $("#example-list");
+$(document).ready(function(){
 
-// // The API object contains methods for each kind of request we'll make
-// var API = {
-//   saveExample: function(example) {
-//     return $.ajax({
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       type: "POST",
-//       url: "api/examples",
-//       data: JSON.stringify(example)
-//     });
-//   },
-//   getExamples: function() {
-//     return $.ajax({
-//       url: "api/examples",
-//       type: "GET"
-//     });
-//   },
-//   deleteExample: function(id) {
-//     return $.ajax({
-//       url: "api/examples/" + id,
-//       type: "DELETE"
-//     });
-//   }
-// };
+  /*var antigens;
+  var url = window.location.search;
+  var patientId;
 
-// // refreshExamples gets new examples from the db and repopulates the list
-// var refreshExamples = function() {
-//   API.getExamples().then(function(data) {
-//     var $examples = data.map(function(example) {
-//       var $a = $("<a>")
-//         .text(example.text)
-//         .attr("href", "/example/" + example.id);
+  if (url.indexOf("?patient_id=") !== -1) {
+    patientId = url.split("=")[1];
+    renderAntigens(patientId);
+  }
 
-//       var $li = $("<li>")
-//         .attr({
-//           class: "list-group-item",
-//           "data-id": example.id
-//         })
-//         .append($a);
+  function renderAntigens(patient){
+    patientId = patient || "";
+    if (patientId) {
+      patientId = "/?patient_id=" + patientId;
+    }
+    $.get("/api/antigens" + patientId, function(data) {
+      console.log("antigens", data);
+      antigens = data;
+      if (!antigens || !antigens.length) {
+        console.log("no antigens for this user")
+      }
+      else {
+        console.log("antigens")
+      }
+    });
+  }*/
 
-//       var $button = $("<button>")
-//         .addClass("btn btn-danger float-right delete")
-//         .text("ｘ");
+  //Push new patient information to patient table - working as of 4:15pm BB
+  function newPatient(event) {
+    event.preventDefault();
 
-//       $li.append($button);
+    let new_patient = {
+      patient_id: $("#patient_id").val().trim(),
+      first_name: $("#first_name").val().trim(),
+      last_name: $("#last_name").val().trim(),
+      address: $("#address").val().trim(),
+      sex: $("#sex").val().trim(),
+      birth: $("#birth").val().trim(),
+      phone: $("#phone").val().trim()
+    };
 
-//       return $li;
-//     });
+    $.ajax("/api/patient", {
+      type: "POST",
+      data: new_patient
+      })
+      .then(function() {
+          console.log("new patient added");
+          location.reload();
+      }
+    );
+    $("#form")[0].reset();
+  };
 
-//     $exampleList.empty();
-//     $exampleList.append($examples);
-//   });
-// };
+  //New test results - needs to connect with patient by primary key (ID)
+  function results(event) {
+    event.preventDefault();
 
-// // handleFormSubmit is called whenever we submit a new example
-// // Save the new example to the db and refresh the list
-// var handleFormSubmit = function(event) {
-//   event.preventDefault();
+    let new_Testresults = {
+      cat: $("#cat_test").val().trim(),
+      dog: $("#dog_test").val().trim(),
+      epic: $("#epic_test").val().trim(),
+      grass: $("#grass_test").val().trim(),
+      pig: $("#pig_test").val().trim(),
+      rag: $("#rag_test").val().trim(),
+      tree: $("#tree_test").val().trim(),
+      oak: $("#oak_test").val().trim(),
+      plant: $("#plant_test").val().trim(),
+      patient_id: $("#patient_id").val().trim(),
+      notes: $("#notes").val().trim()
+    };
 
-//   var example = {
-//     text: $exampleText.val().trim(),
-//     description: $exampleDescription.val().trim()
-//   };
+    let new_Treatment = {
+      cat: $("#cat_ment").val().trim(),
+      dog: $("#dog_ment").val().trim(),
+      epic: $("#epic_ment").val().trim(),
+      grass: $("#grass_ment").val().trim(),
+      pig: $("#pig_ment").val().trim(),
+      rag: $("#rag_ment").val().trim(),
+      tree: $("#tree_ment").val().trim(),
+      oak: $("#oak_ment").val().trim(),
+      plant: $("#plant_ment").val().trim(),
+      patient_id: $("#patient_id").val().trim(),
+      notes: $("#notes").val().trim()
+    };
 
-//   if (!(example.text && example.description)) {
-//     alert("You must enter an example text and description!");
-//     return;
-//   }
+    if (typeof new_Testresults.cat === "undefined" && typeof new_Treatment.cat === "undefined"){
+      alert("fill out all fields");
+    } else if (typeof new_Testresults.cat && typeof new_Treatment.cat) {
+      $.ajax("/api/dilution", {
+        type: "POST",
+        data: new_Treatment
+      })
+        .then(function() {
+          location.reload();
+        }
+      );
 
-//   API.saveExample(example).then(function() {
-//     refreshExamples();
-//   });
+      $.ajax("/api/antigen", {
+        type: "POST",
+        data: new_Testresults
+      })
+        .then(function() {
+          location.reload();
+        }
+      );
+    } else if (typeof new_Testresults.cat === "undefined" && typeof new_Treatment.cat){
+      $.ajax("/api/dilution", {
+        type: "POST",
+        data: new_Treatment
+      })
+        .then(function() {
+          location.reload();
+        }
+      );
+    }
+    $("#results-form")[0].reset();
+  }
 
-//   $exampleText.val("");
-//   $exampleDescription.val("");
-// };
+  $(document).on("click", "#new_patient", newPatient);
+  $(document).on("click", "#submit", results);
 
-// // handleDeleteBtnClick is called when an example's delete button is clicked
-// // Remove the example from the db and refresh the list
-// var handleDeleteBtnClick = function() {
-//   var idToDelete = $(this)
-//     .parent()
-//     .attr("data-id");
-
-//   API.deleteExample(idToDelete).then(function() {
-//     refreshExamples();
-//   });
-// };
-
-// // Add event listeners to the submit and delete buttons
-// $submitBtn.on("click", handleFormSubmit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+})

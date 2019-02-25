@@ -14,6 +14,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+<script src="./js/index.js"></script>
+
 <link rel="stylesheet" href="../styles/allergies.css">
 <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
@@ -86,7 +88,7 @@ Moved this to allergy.css file--}}
 
 
 <div class="container" id="formContain">
-    <form>
+    <form id="results-form">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -107,28 +109,28 @@ Moved this to allergy.css file--}}
                     <th scope="row"
                         data-balloon="Results from Allergy Test, 1 being the least severe, 12 being the most"
                         data-balloon-pos="up">Test Results (1-12)</th>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
-                    <td><input type="number" min="0" max="12"></td>
+                    <td><input id="cat_test" type="number" min="0" max="12"></td>
+                    <td><input id="dog_test" type="number" min="0" max="12"></td>
+                    <td><input id="epic_test" type="number" min="0" max="12"></td>
+                    <td><input id="grass_test" type="number" min="0" max="12"></td>
+                    <td><input id="pig_test" type="number" min="0" max="12"></td>
+                    <td><input id="rag_test" type="number" min="0" max="12"></td>
+                    <td><input id="tree_test" type="number" min="0" max="12"></td>
+                    <td><input id="oak_test" type="number" min="0" max="12"></td>
+                    <td><input id="plant_test" type="number" min="0" max="12"></td>
                 </tr>
                 <tr>
                     <th scope="row" data-balloon="How much to dilute the dose for proper treatment"
                         data-balloon-pos="up">Dilution Dosage (1-5)</th>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
-                    <td><input type="number" min="0" max="5"></td>
+                    <td><input id="cat_ment" type="number" min="0" max="5"></td>
+                    <td><input id="dog_ment" type="number" min="0" max="5"></td>
+                    <td><input id="epic_ment" type="number" min="0" max="5"></td>
+                    <td><input id="grass_ment" type="number" min="0" max="5"></td>
+                    <td><input id="pig_ment" type="number" min="0" max="5"></td>
+                    <td><input id="rag_ment" type="number" min="0" max="5"></td>
+                    <td><input id="tree_ment" type="number" min="0" max="5"></td>
+                    <td><input id="oak_ment" type="number" min="0" max="5"></td>
+                    <td><input id="plant_ment" type="number" min="0" max="5"></td>
                 </tr>
                 <tr height="100">
                     <th scope="row" colspan="1" data-balloon="Notes for future use" data-balloon-pos="up">Notes:
@@ -136,12 +138,15 @@ Moved this to allergy.css file--}}
                     <td colspan="10"><input id="notes" type="text"></td>
                 </tr>
                 <tr>
-                    <td id="date">
-                        <input type="date" id="date" value="yyyy-MM-dd" min="2019-02-21" max="2030-02-21">
+                    <td>
+                        <input type="text" id="patient_id" placeholder="enter patient id">
                     </td>
                 </tr>
             <tbody>
         </table>
+        <div>
+            <input id="submit" type="submit" value="Submit">
+        </div>
     </form>
 </div>
 
@@ -197,9 +202,6 @@ Moved this to allergy.css file--}}
                 <br>
     </div>
 
-    <div>
-        <input id="submit" type="submit" value="Submit">
-    </div>
 </div>
 
 

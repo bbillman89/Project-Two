@@ -1,6 +1,9 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var Handlebars = require("handlebars");
+var MomentHandler = require("handlebars.moment");
+MomentHandler.registerHelpers(Handlebars);
 
 
 var app = express();
