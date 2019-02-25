@@ -46,6 +46,10 @@ div h1{
     border-bottom: none;
     background-color: rgba(255, 255, 255, 0.89)
 }
+.name{
+    color: white;
+    
+}
 label{
     color:white;
     margin-right: 10px;
